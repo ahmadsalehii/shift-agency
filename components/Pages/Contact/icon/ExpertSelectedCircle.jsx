@@ -1,0 +1,23 @@
+const ExpertSelectedCircle = () => {
+  return (
+    <svg
+      width="10"
+      height="10"
+      viewBox="0 0 10 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="5"
+        cy="5"
+        r="4"
+        fill="#3366E8"
+        stroke="white"
+        strokeWidth="2"
+      />
+      <circle cx="5" cy="5" r="4.5" stroke="#3366E8" />
+    </svg>
+  );
+};
+
+export default ExpertSelectedCircle;

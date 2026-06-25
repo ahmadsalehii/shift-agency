@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: url("/images/cursor.png"), auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  width: 3px;
+  background-color: #fff; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: #3366e8;
+  border: 3.5px solid #fff;
+  border-radius: 50px;
+  transition: 0.2s all;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2051cf;
+  transition: 0.2s all;
+}
+
+@layer base {
+  .font-outline-1 {
+    -webkit-text-stroke: 1px #ccc;
+  }
+
+  .font-outline-sm {
+    -webkit-text-stroke: 0.280088px #b1b0b0;
+  }
+
+  .app-container {
+    @apply w-full px-8 lg:px-0 lg:w-9/12 xl:w-10/12 mx-auto;
+  }
+
+  .about-outline-text {
+    color: white;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px 1px 0 #fff;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team-clip {
+    clip-path: ellipse(380% 100% at 50% 100%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .team-clip {
+    clip-path: ellipse(95% 100% at 50% 100%);
+  }
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  font-size: 18px !important;
+  color: black !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  font-size: 18px !important;
+  color: black !important;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  top: -27px !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  top: -27px !important;
+  right: 49px !important;
+  left: auto !important;
+}
+
+.ripple-button {
+  transition: color 0.5s;
+}
+
+.ripple-button span {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: -10;
+  width: 0;
+  height: 0;
+
+  border-radius: 100%;
+  background: #3366e8;
+
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, padding-top 0.5s;
+}
+
+.ripple-button:hover span {
+  width: calc(100% * 2.25);
+  padding-top: calc(100% * 2.25);
+}
+
+.ripple-button:hover {
+  color: white;
+}
